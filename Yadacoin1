@@ -1,0 +1,45 @@
+
+ {
+  "pool": { "name": "Yadaminerz.com",
+  "url": "https://yadaminerz.com",
+  "fee": 0.1, 
+  "type": "PPLNS" 
+}, 
+ {
+"coin": "Yadacoin",
+"servers": [ { "geo": "USA", ]
+"url": ["pool.yadaminerz.com:3333" ], 
+"ssl_url": ["pool.yadaminerz.com:5555"]
+},
+  {
+"miners": [ "name":"xmrig",]
+"configs": 
+"algo": "rx/yada", "coin": null, 
+"url": "pool.yadaminerz.com:3333", 
+"user": "%WAL%.%WORKER_NAME%.X", 
+"pass": "x", 
+"rig-id": null,
+"nicehash": false, 
+"keepalive": true, 
+"enabled": true, 
+"TLS": false 
+},
+   { 
+"algo": "rx/yada",
+"coin": null, 
+"url": "pool.yadaminerz.com:5555", "user": "%WAL%.%WORKER_NAME%.X", "pass": "x", 
+"rig-id": null, 
+"nicehash": false, 
+"keepalive": true,
+"enabled": true, 
+"TLS": true 
+}
+}, 
+   { 
+"name": "srbminer", 
+"template":"POOL:%URL%,WALLET:%WAL%.%WORKER_NAME% PSW:x",
+"config": { "algo": "randomyada", "pass": "x", "port": "%URL_PORT%", "server_command": "./SRBMiner-MULTI --algorithm randomyada --pool pool.yadaminerz.com:3333 --wallet %WAL%.%WORKER_NAME%.X --password x --cpu-threads 0 --disable-gpu --keepalive true", "template": "%WAL%.%WORKER_NAME%" 
+    } 
+   } 
+  ]
+ }
